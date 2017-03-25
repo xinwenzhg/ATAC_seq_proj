@@ -1,0 +1,82 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+This is cutadapt 1.13 with Python 3.5.2
+Command line parameters: -m 5 -e 0.2 -a CTGTCTCTTATA raw/Tacseq/A4_P004_2_R2.fq.gz
+Trimming 1 adapter with at most 20.0% errors in single-end mode ...
+Finished in 105.10 s (47 us/read; 1.28 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               2,241,713
+Reads with adapters:                   241,264 (10.8%)
+Reads that were too short:               1,149 (0.1%)
+Reads written (passing filters):     2,240,564 (99.9%)
+
+Total basepairs processed:   112,085,650 bp
+Total written (filtered):    110,243,507 bp (98.4%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 241264 times.
+
+No. of allowed errors:
+0-4 bp: 0; 5-9 bp: 1; 10-12 bp: 2
+
+Bases preceding removed adapters:
+  A: 17.0%
+  C: 28.9%
+  G: 29.2%
+  T: 24.9%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	40448	35026.8	0	40448
+4	38992	8756.7	0	16820 22172
+5	45693	2189.2	1	12087 33606
+6	24395	547.3	1	11291 13104
+7	15550	136.8	1	10015 5535
+8	11452	34.2	1	8522 2578 352
+9	9196	8.6	1	7350 699 1147
+10	9678	2.1	2	6481 318 2879
+11	6974	0.5	2	5984 221 769
+12	5876	0.1	2	5348 191 337
+13	6178	0.1	2	5640 220 318
+14	6241	0.1	2	5732 193 316
+15	4730	0.1	2	4294 129 307
+16	2759	0.1	2	2347 86 326
+17	1559	0.1	2	1234 48 277
+18	955	0.1	2	650 36 269
+19	659	0.1	2	400 17 242
+20	597	0.1	2	306 23 268
+21	668	0.1	2	397 24 247
+22	634	0.1	2	368 16 250
+23	574	0.1	2	317 22 235
+24	618	0.1	2	367 18 233
+25	291	0.1	2	33 7 251
+26	345	0.1	2	57 17 271
+27	321	0.1	2	29 10 282
+28	290	0.1	2	24 10 256
+29	257	0.1	2	13 11 233
+30	276	0.1	2	16 14 246
+31	218	0.1	2	19 10 189
+32	215	0.1	2	4 6 205
+33	240	0.1	2	2 11 227
+34	253	0.1	2	8 7 238
+35	235	0.1	2	10 3 222
+36	224	0.1	2	7 9 208
+37	252	0.1	2	3 5 244
+38	273	0.1	2	4 6 263
+39	232	0.1	2	5 4 223
+40	340	0.1	2	1 10 329
+41	209	0.1	2	3 5 201
+42	683	0.1	2	1 28 654
+43	156	0.1	2	1 7 148
+44	214	0.1	2	1 8 205
+45	165	0.1	2	1 1 163
+46	143	0.1	2	0 8 135
+47	415	0.1	2	2 12 401
+48	200	0.1	2	1 4 195
+49	186	0.1	2	2 7 177
+50	205	0.1	2	0 8 197
+

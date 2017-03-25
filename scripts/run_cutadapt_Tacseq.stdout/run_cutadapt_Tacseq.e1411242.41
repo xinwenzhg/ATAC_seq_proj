@@ -1,0 +1,82 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+This is cutadapt 1.13 with Python 3.5.2
+Command line parameters: -m 5 -e 0.2 -a CTGTCTCTTATA raw/Tacseq/A5_P021_3_R2.fq.gz
+Trimming 1 adapter with at most 20.0% errors in single-end mode ...
+Finished in 39.61 s (47 us/read; 1.26 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 834,460
+Reads with adapters:                    84,498 (10.1%)
+Reads that were too short:                 482 (0.1%)
+Reads written (passing filters):       833,978 (99.9%)
+
+Total basepairs processed:    41,723,000 bp
+Total written (filtered):     41,070,584 bp (98.4%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 84498 times.
+
+No. of allowed errors:
+0-4 bp: 0; 5-9 bp: 1; 10-12 bp: 2
+
+Bases preceding removed adapters:
+  A: 17.5%
+  C: 27.7%
+  G: 29.0%
+  T: 25.7%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	14634	13038.4	0	14634
+4	13963	3259.6	0	5808 8155
+5	16224	814.9	1	3862 12362
+6	8472	203.7	1	3547 4925
+7	5214	50.9	1	3027 2187
+8	3673	12.7	1	2561 974 138
+9	2850	3.2	1	2180 236 434
+10	3277	0.8	2	2047 113 1117
+11	2125	0.2	2	1792 83 250
+12	1958	0.0	2	1745 63 150
+13	1930	0.0	2	1755 75 100
+14	2035	0.0	2	1825 81 129
+15	1671	0.0	2	1506 52 113
+16	1099	0.0	2	960 27 112
+17	720	0.0	2	617 19 84
+18	527	0.0	2	394 23 110
+19	315	0.0	2	203 17 95
+20	221	0.0	2	125 7 89
+21	268	0.0	2	154 7 107
+22	234	0.0	2	118 5 111
+23	206	0.0	2	112 12 82
+24	234	0.0	2	126 5 103
+25	110	0.0	2	15 0 95
+26	106	0.0	2	18 6 82
+27	104	0.0	2	7 5 92
+28	95	0.0	2	7 4 84
+29	97	0.0	2	10 5 82
+30	127	0.0	2	2 4 121
+31	87	0.0	2	9 3 75
+32	88	0.0	2	4 2 82
+33	98	0.0	2	4 7 87
+34	99	0.0	2	3 1 95
+35	100	0.0	2	0 2 98
+36	82	0.0	2	2 3 77
+37	103	0.0	2	1 5 97
+38	108	0.0	2	0 3 105
+39	95	0.0	2	1 3 91
+40	105	0.0	2	0 3 102
+41	83	0.0	2	0 2 81
+42	261	0.0	2	2 15 244
+43	62	0.0	2	0 3 59
+44	86	0.0	2	0 3 83
+45	70	0.0	2	0 1 69
+46	66	0.0	2	0 4 62
+47	179	0.0	2	1 7 171
+48	71	0.0	2	1 5 65
+49	70	0.0	2	0 2 68
+50	96	0.0	2	0 2 94
+

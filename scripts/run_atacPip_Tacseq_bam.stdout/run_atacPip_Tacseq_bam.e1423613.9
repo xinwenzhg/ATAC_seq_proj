@@ -1,0 +1,22 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+[Fri Mar 24 03:14:22 PDT 2017] net.sf.picard.sam.MarkDuplicates INPUT=[temp_9.sort.bam] OUTPUT=temp_9.dup.bam METRICS_FILE=midstep/atacPip_Tacseq_bam_output_qc/A5_P021.dup.qc REMOVE_DUPLICATES=false ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT    PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false
+[Fri Mar 24 03:14:22 PDT 2017] Executing as xinwenz@compute-2-13.local on Linux 3.10.104-1.el6.elrepo.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.7.0_55-b13; Picard version: 1.111(1901) IntelDeflater
+INFO	2017-03-24 03:14:22	MarkDuplicates	Start of doWork freeMemory: 1017462008; totalMemory: 1029177344; maxMemory: 1029177344
+INFO	2017-03-24 03:14:22	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2017-03-24 03:14:22	MarkDuplicates	Will retain up to 4084037 data points before spilling to disk.
+INFO	2017-03-24 03:14:42	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:19s.  Time for last 1,000,000:   19s.  Last read position: chr3R:26,504,010
+INFO	2017-03-24 03:14:42	MarkDuplicates	Tracking 4 as yet unmatched pairs. 4 records in RAM.
+INFO	2017-03-24 03:14:46	MarkDuplicates	Read 1260624 records. 0 pairs never matched.
+INFO	2017-03-24 03:15:01	MarkDuplicates	After buildSortedReadEndLists freeMemory: 758736432; totalMemory: 917504000; maxMemory: 954728448
+INFO	2017-03-24 03:15:01	MarkDuplicates	Will retain up to 29835264 duplicate indices before spilling to disk.
+INFO	2017-03-24 03:15:01	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2017-03-24 03:15:03	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2017-03-24 03:15:03	MarkDuplicates	Sorting list of duplicate records.
+INFO	2017-03-24 03:15:04	MarkDuplicates	After generateDuplicateIndexes freeMemory: 745104296; totalMemory: 988807168; maxMemory: 988807168
+INFO	2017-03-24 03:15:04	MarkDuplicates	Marking 99108 records as duplicates.
+INFO	2017-03-24 03:15:04	MarkDuplicates	Found 39561 optical duplicate clusters.
+INFO	2017-03-24 03:15:32	MarkDuplicates	Before output close freeMemory: 964649368; totalMemory: 972029952; maxMemory: 972029952
+INFO	2017-03-24 03:15:32	MarkDuplicates	After output close freeMemory: 1002919392; totalMemory: 1010302976; maxMemory: 1010302976
+[Fri Mar 24 03:15:32 PDT 2017] net.sf.picard.sam.MarkDuplicates done. Elapsed time: 1.18 minutes.
+Runtime.totalMemory()=1010302976

@@ -1,0 +1,82 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+This is cutadapt 1.13 with Python 3.5.2
+Command line parameters: -m 5 -e 0.2 -a CTGTCTCTTATA raw/Tacseq/A4_P013_1_R2.fq.gz
+Trimming 1 adapter with at most 20.0% errors in single-end mode ...
+Finished in 99.74 s (46 us/read; 1.29 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               2,146,543
+Reads with adapters:                   195,482 (9.1%)
+Reads that were too short:               1,062 (0.0%)
+Reads written (passing filters):     2,145,481 (100.0%)
+
+Total basepairs processed:   107,327,150 bp
+Total written (filtered):    105,894,707 bp (98.7%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 195482 times.
+
+No. of allowed errors:
+0-4 bp: 0; 5-9 bp: 1; 10-12 bp: 2
+
+Bases preceding removed adapters:
+  A: 18.2%
+  C: 25.8%
+  G: 29.8%
+  T: 26.2%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	36586	33539.7	0	36586
+4	34662	8384.9	0	13224 21438
+5	40951	2096.2	1	8000 32951
+6	19808	524.1	1	7092 12716
+7	11658	131.0	1	5918 5740
+8	7945	32.8	1	5088 2494 363
+9	6094	8.2	1	4407 590 1097
+10	6979	2.0	2	3852 267 2860
+11	4324	0.5	2	3499 156 669
+12	3585	0.1	2	3112 121 352
+13	3830	0.1	2	3411 133 286
+14	3725	0.1	2	3290 134 301
+15	2743	0.1	2	2368 103 272
+16	1778	0.1	2	1411 54 313
+17	989	0.1	2	707 28 254
+18	684	0.1	2	396 30 258
+19	485	0.1	2	227 15 243
+20	423	0.1	2	174 13 236
+21	480	0.1	2	231 26 223
+22	433	0.1	2	206 19 208
+23	463	0.1	2	199 16 248
+24	413	0.1	2	189 11 213
+25	276	0.1	2	29 13 234
+26	271	0.1	2	39 11 221
+27	273	0.1	2	16 6 251
+28	261	0.1	2	20 4 237
+29	254	0.1	2	8 6 240
+30	271	0.1	2	6 7 258
+31	232	0.1	2	20 9 203
+32	240	0.1	2	7 8 225
+33	253	0.1	2	7 10 236
+34	232	0.1	2	5 9 218
+35	217	0.1	2	3 7 207
+36	194	0.1	2	5 10 179
+37	232	0.1	2	1 9 222
+38	214	0.1	2	1 8 205
+39	223	0.1	2	2 8 213
+40	317	0.1	2	4 11 302
+41	232	0.1	2	1 5 226
+42	660	0.1	2	3 23 634
+43	157	0.1	2	1 1 155
+44	222	0.1	2	1 9 212
+45	151	0.1	2	1 2 148
+46	128	0.1	2	0 7 121
+47	403	0.1	2	3 12 388
+48	181	0.1	2	2 2 177
+49	145	0.1	2	0 4 141
+50	205	0.1	2	0 3 202
+

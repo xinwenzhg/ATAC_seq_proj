@@ -1,0 +1,18 @@
+/data/hpc/sge/blcr/blcr_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/blcr/blcr_submit.sh: line 18: bind: warning: line editing not enabled
+30941452 reads; of these:
+  30941452 (100.00%) were paired; of these:
+    1599889 (5.17%) aligned concordantly 0 times
+    23965866 (77.46%) aligned concordantly exactly 1 time
+    5375697 (17.37%) aligned concordantly >1 times
+    ----
+    1599889 pairs aligned concordantly 0 times; of these:
+      117948 (7.37%) aligned discordantly 1 time
+    ----
+    1481941 pairs aligned 0 times concordantly or discordantly; of these:
+      2963882 mates make up the pairs; of these:
+        1623766 (54.79%) aligned 0 times
+        961461 (32.44%) aligned exactly 1 time
+        378655 (12.78%) aligned >1 times
+97.38% overall alignment rate
+[bam_sort_core] merging from 38 files...

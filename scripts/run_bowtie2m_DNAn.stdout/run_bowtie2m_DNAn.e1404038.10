@@ -1,0 +1,4 @@
+/data/hpc/sge/blcr/blcr_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/blcr/blcr_submit.sh: line 18: bind: warning: line editing not enabled
+(ERR): bowtie2-align died with signal 4 (ILL) 
+/data/hpc/sge/blcr/blcr_submit.sh: line 122:  9431 Illegal instruction     cr_restart $RESTART_FILE &>>$CP_JOB_REPORT

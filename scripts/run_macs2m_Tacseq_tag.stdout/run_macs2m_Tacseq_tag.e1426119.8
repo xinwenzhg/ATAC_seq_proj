@@ -1,0 +1,157 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+
+If you are loading enthought_python with OTHER modules / software 
+'module load enthought_python' FIRST then the rest of your software.
+
+Installing libs/modules /for/ this python or using it /in conjuction/ with other 
+compiled code requires gcc/4.8.2 (not auto-loaded) 
+
+To list the packages already installed in the enthought_python module:
+' pip list --format=columns | grep -i your-target '
+
+INFO  @ Fri, 24 Mar 2017 22:21:19: 
+# Command line: callpeak -t midstep/gatTag_Tacseq_bedpe_output/A7_ED.tag.gz -f BED -g dm -n A7_ED -p 0.01 --nomodel -B --SPMR --keep-dup all
+# ARGUMENTS LIST:
+# name = A7_ED
+# format = BED
+# ChIP-seq file = ['midstep/gatTag_Tacseq_bedpe_output/A7_ED.tag.gz']
+# control file = None
+# effective genome size = 1.20e+08
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Fri, 24 Mar 2017 22:21:19: #1 read tag files... 
+INFO  @ Fri, 24 Mar 2017 22:21:19: #1 read treatment tags... 
+INFO  @ Fri, 24 Mar 2017 22:21:23:  1000000 
+INFO  @ Fri, 24 Mar 2017 22:21:28:  2000000 
+INFO  @ Fri, 24 Mar 2017 22:21:33:  3000000 
+INFO  @ Fri, 24 Mar 2017 22:21:38:  4000000 
+INFO  @ Fri, 24 Mar 2017 22:21:43:  5000000 
+INFO  @ Fri, 24 Mar 2017 22:21:48:  6000000 
+INFO  @ Fri, 24 Mar 2017 22:21:53:  7000000 
+INFO  @ Fri, 24 Mar 2017 22:21:58:  8000000 
+INFO  @ Fri, 24 Mar 2017 22:22:03:  9000000 
+INFO  @ Fri, 24 Mar 2017 22:22:08:  10000000 
+INFO  @ Fri, 24 Mar 2017 22:22:13:  11000000 
+INFO  @ Fri, 24 Mar 2017 22:22:18:  12000000 
+INFO  @ Fri, 24 Mar 2017 22:22:22:  13000000 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #1 tag size is determined as 45 bps 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #1 tag size = 45 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #1  total tags in treatment: 13572184 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #1 finished! 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #2 Build Peak Model... 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #2 Skipped... 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #2 Use 200 as fragment length 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #3 Call peaks... 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Fri, 24 Mar 2017 22:22:27: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 24 Mar 2017 22:23:40: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 24 Mar 2017 22:23:40: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... A7_ED_treat_pileup.bdg 
+INFO  @ Fri, 24 Mar 2017 22:23:40: #3   Write bedGraph files for control lambda (after scaling if necessary)... A7_ED_control_lambda.bdg 
+INFO  @ Fri, 24 Mar 2017 22:23:40: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Fri, 24 Mar 2017 22:23:40: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 24 Mar 2017 22:25:39: #4 Write output xls file... A7_ED_peaks.xls 
+INFO  @ Fri, 24 Mar 2017 22:25:39: #4 Write peak in narrowPeak format file... A7_ED_peaks.narrowPeak 
+INFO  @ Fri, 24 Mar 2017 22:25:39: #4 Write summits bed file... A7_ED_summits.bed 
+INFO  @ Fri, 24 Mar 2017 22:25:40: Done! 
+INFO  @ Fri, 24 Mar 2017 22:25:40: Read and build treatment bedGraph... 
+INFO  @ Fri, 24 Mar 2017 22:26:20: Read and build control bedGraph... 
+INFO  @ Fri, 24 Mar 2017 22:26:43: Build scoreTrackII... 
+INFO  @ Fri, 24 Mar 2017 22:26:59: Calculate scores comparing treatment and control by 'FE'... 
+INFO  @ Fri, 24 Mar 2017 22:29:45: Write bedGraph of scores... 
+INFO  @ Fri, 24 Mar 2017 22:31:07: Finished 'FE'! Please check 'A7_ED_FE.bdg'! 
+INFO  @ Fri, 24 Mar 2017 22:34:32: 
+# Command line: callpeak -t midstep/gatTag_Tacseq_bedpe_output/A7_ED_PP1.tag.gz -f BED -g dm -n A7_ED_PP1 -p 0.01 --nomodel -B --SPMR --keep-dup all
+# ARGUMENTS LIST:
+# name = A7_ED_PP1
+# format = BED
+# ChIP-seq file = ['midstep/gatTag_Tacseq_bedpe_output/A7_ED_PP1.tag.gz']
+# control file = None
+# effective genome size = 1.20e+08
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Fri, 24 Mar 2017 22:34:32: #1 read tag files... 
+INFO  @ Fri, 24 Mar 2017 22:34:32: #1 read treatment tags... 
+INFO  @ Fri, 24 Mar 2017 22:34:37:  1000000 
+INFO  @ Fri, 24 Mar 2017 22:34:42:  2000000 
+INFO  @ Fri, 24 Mar 2017 22:34:46:  3000000 
+INFO  @ Fri, 24 Mar 2017 22:34:51:  4000000 
+INFO  @ Fri, 24 Mar 2017 22:34:56:  5000000 
+INFO  @ Fri, 24 Mar 2017 22:35:01:  6000000 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #1 tag size is determined as 45 bps 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #1 tag size = 45 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #1  total tags in treatment: 6786092 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #1 finished! 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #2 Build Peak Model... 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #2 Skipped... 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #2 Use 200 as fragment length 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #3 Call peaks... 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Fri, 24 Mar 2017 22:35:05: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 24 Mar 2017 22:35:36: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 24 Mar 2017 22:35:36: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... A7_ED_PP1_treat_pileup.bdg 
+INFO  @ Fri, 24 Mar 2017 22:35:36: #3   Write bedGraph files for control lambda (after scaling if necessary)... A7_ED_PP1_control_lambda.bdg 
+INFO  @ Fri, 24 Mar 2017 22:35:36: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Fri, 24 Mar 2017 22:35:36: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 24 Mar 2017 22:36:44: #4 Write output xls file... A7_ED_PP1_peaks.xls 
+INFO  @ Fri, 24 Mar 2017 22:36:44: #4 Write peak in narrowPeak format file... A7_ED_PP1_peaks.narrowPeak 
+INFO  @ Fri, 24 Mar 2017 22:36:44: #4 Write summits bed file... A7_ED_PP1_summits.bed 
+INFO  @ Fri, 24 Mar 2017 22:36:44: Done! 
+INFO  @ Fri, 24 Mar 2017 22:36:45: 
+# Command line: callpeak -t midstep/gatTag_Tacseq_bedpe_output/A7_ED_PP2.tag.gz -f BED -g dm -n A7_ED_PP2 -p 0.01 --nomodel -B --SPMR --keep-dup all
+# ARGUMENTS LIST:
+# name = A7_ED_PP2
+# format = BED
+# ChIP-seq file = ['midstep/gatTag_Tacseq_bedpe_output/A7_ED_PP2.tag.gz']
+# control file = None
+# effective genome size = 1.20e+08
+# band width = 300
+# model fold = [5, 50]
+# pvalue cutoff = 1.00e-02
+# qvalue will not be calculated and reported as -1 in the final output.
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# MACS will save fragment pileup signal per million reads
+ 
+INFO  @ Fri, 24 Mar 2017 22:36:45: #1 read tag files... 
+INFO  @ Fri, 24 Mar 2017 22:36:45: #1 read treatment tags... 
+INFO  @ Fri, 24 Mar 2017 22:36:51:  1000000 
+INFO  @ Fri, 24 Mar 2017 22:36:55:  2000000 
+INFO  @ Fri, 24 Mar 2017 22:37:00:  3000000 
+INFO  @ Fri, 24 Mar 2017 22:37:05:  4000000 
+INFO  @ Fri, 24 Mar 2017 22:37:10:  5000000 
+INFO  @ Fri, 24 Mar 2017 22:37:14:  6000000 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #1 tag size is determined as 44 bps 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #1 tag size = 44 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #1  total tags in treatment: 6786092 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #1 finished! 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #2 Build Peak Model... 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #2 Skipped... 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #2 Use 200 as fragment length 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #3 Call peaks... 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #3 Call peaks with given -log10pvalue cutoff: 2.00000 ... 
+INFO  @ Fri, 24 Mar 2017 22:37:19: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 24 Mar 2017 22:37:49: #3 In the peak calling step, the following will be performed simultaneously: 
+INFO  @ Fri, 24 Mar 2017 22:37:49: #3   Write bedGraph files for treatment pileup (after scaling if necessary)... A7_ED_PP2_treat_pileup.bdg 
+INFO  @ Fri, 24 Mar 2017 22:37:49: #3   Write bedGraph files for control lambda (after scaling if necessary)... A7_ED_PP2_control_lambda.bdg 
+INFO  @ Fri, 24 Mar 2017 22:37:49: #3   --SPMR is requested, so pileup will be normalized by sequencing depth in million reads. 
+INFO  @ Fri, 24 Mar 2017 22:37:49: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 24 Mar 2017 22:38:57: #4 Write output xls file... A7_ED_PP2_peaks.xls 
+INFO  @ Fri, 24 Mar 2017 22:38:57: #4 Write peak in narrowPeak format file... A7_ED_PP2_peaks.narrowPeak 
+INFO  @ Fri, 24 Mar 2017 22:38:57: #4 Write summits bed file... A7_ED_PP2_summits.bed 
+INFO  @ Fri, 24 Mar 2017 22:38:57: Done! 

@@ -1,0 +1,82 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+This is cutadapt 1.13 with Python 3.5.2
+Command line parameters: -m 5 -e 0.2 -a CTGTCTCTTATA raw/Tacseq/A5_P030_3_R2.fq.gz
+Trimming 1 adapter with at most 20.0% errors in single-end mode ...
+Finished in 110.33 s (47 us/read; 1.29 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:               2,366,370
+Reads with adapters:                   234,504 (9.9%)
+Reads that were too short:               1,203 (0.1%)
+Reads written (passing filters):     2,365,167 (99.9%)
+
+Total basepairs processed:   118,318,500 bp
+Total written (filtered):    116,504,764 bp (98.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATA; Type: regular 3'; Length: 12; Trimmed: 234504 times.
+
+No. of allowed errors:
+0-4 bp: 0; 5-9 bp: 1; 10-12 bp: 2
+
+Bases preceding removed adapters:
+  A: 17.8%
+  C: 27.1%
+  G: 28.9%
+  T: 26.2%
+  none/other: 0.1%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	40934	36974.5	0	40934
+4	38590	9243.6	0	15811 22779
+5	45474	2310.9	1	10290 35184
+6	22789	577.7	1	9227 13562
+7	14498	144.4	1	8252 6246
+8	10219	36.1	1	7102 2738 379
+9	7652	9.0	1	5754 659 1239
+10	8773	2.3	2	5292 337 3144
+11	6010	0.6	2	5011 211 788
+12	5283	0.1	2	4662 188 433
+13	5344	0.1	2	4835 191 318
+14	5768	0.1	2	5255 194 319
+15	4706	0.1	2	4287 136 283
+16	3163	0.1	2	2730 94 339
+17	2156	0.1	2	1781 58 317
+18	1427	0.1	2	1073 37 317
+19	841	0.1	2	567 29 245
+20	661	0.1	2	370 24 267
+21	761	0.1	2	452 33 276
+22	651	0.1	2	338 25 288
+23	673	0.1	2	394 30 249
+24	658	0.1	2	389 12 257
+25	351	0.1	2	46 15 290
+26	332	0.1	2	62 12 258
+27	338	0.1	2	31 12 295
+28	321	0.1	2	28 12 281
+29	279	0.1	2	18 10 251
+30	309	0.1	2	13 15 281
+31	271	0.1	2	18 12 241
+32	293	0.1	2	12 12 269
+33	279	0.1	2	7 17 255
+34	238	0.1	2	5 6 227
+35	260	0.1	2	4 7 249
+36	263	0.1	2	10 8 245
+37	286	0.1	2	2 8 276
+38	281	0.1	2	3 7 271
+39	229	0.1	2	1 7 221
+40	336	0.1	2	3 9 324
+41	255	0.1	2	3 5 247
+42	751	0.1	2	6 21 724
+43	200	0.1	2	0 5 195
+44	219	0.1	2	0 3 216
+45	179	0.1	2	0 3 176
+46	131	0.1	2	0 3 128
+47	455	0.1	2	4 13 438
+48	221	0.1	2	1 10 210
+49	177	0.1	2	0 5 172
+50	219	0.1	2	0 13 206
+
