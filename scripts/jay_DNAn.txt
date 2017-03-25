@@ -1,0 +1,12 @@
+A4_1_1.new.fq.gz	A4_1_2.new.fq.gz	A4_1.sort.bam
+A4_2_1.new.fq.gz	A4_2_2.new.fq.gz	A4_2.sort.bam
+A4_3_1.new.fq.gz	A4_3_2.new.fq.gz	A4_3.sort.bam
+A5_1_1.new.fq.gz	A5_1_2.new.fq.gz	A5_1.sort.bam
+A5_2_1.new.fq.gz	A5_2_2.new.fq.gz	A5_2.sort.bam
+A5_3_1.new.fq.gz	A5_3_2.new.fq.gz	A5_3.sort.bam
+A6_1_1.new.fq.gz	A6_1_2.new.fq.gz	A6_1.sort.bam
+A6_2_1.new.fq.gz	A6_2_2.new.fq.gz	A6_2.sort.bam
+A6_3_1.new.fq.gz	A6_3_2.new.fq.gz	A6_3.sort.bam
+A7_1_1.new.fq.gz	A7_1_2.new.fq.gz	A7_1.sort.bam
+A7_2_1.new.fq.gz	A7_2_2.new.fq.gz	A7_2.sort.bam
+A7_3_1.new.fq.gz	A7_3_2.new.fq.gz	A7_3.sort.bam

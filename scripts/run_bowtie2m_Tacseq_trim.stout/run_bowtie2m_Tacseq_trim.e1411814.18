@@ -1,0 +1,18 @@
+/data/hpc/sge/restart/restart_submit.sh: line 17: bind: warning: line editing not enabled
+/data/hpc/sge/restart/restart_submit.sh: line 18: bind: warning: line editing not enabled
+3258891 reads; of these:
+  3258891 (100.00%) were paired; of these:
+    415934 (12.76%) aligned concordantly 0 times
+    2588879 (79.44%) aligned concordantly exactly 1 time
+    254078 (7.80%) aligned concordantly >1 times
+    ----
+    415934 pairs aligned concordantly 0 times; of these:
+      14182 (3.41%) aligned discordantly 1 time
+    ----
+    401752 pairs aligned 0 times concordantly or discordantly; of these:
+      803504 mates make up the pairs; of these:
+        511976 (63.72%) aligned 0 times
+        250761 (31.21%) aligned exactly 1 time
+        40767 (5.07%) aligned >1 times
+92.14% overall alignment rate
+[bam_sort_core] merging from 4 files...

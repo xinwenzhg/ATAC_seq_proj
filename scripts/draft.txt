@@ -1,0 +1,73 @@
+bowtie2 -k 4 -X2000 --mm  -x ../../ref/dmel_all  -1 test_dna_R1.fq.gz -2 test_dna_R2.fq.gz | samtools view -b | samtools sort -o test_dna.sort.bam
+
+samtools addreplacerg -r 'ID:ts' -r 'LB:1334' -r 'SM:alpha' -o test_dna.RG1.bam test_dna.sort.bam
+
+samtools merge  merge2.bam $(ls *.RG[12].bam)
+
+samtool index merged1.bam
+
+java -d64 -Xmx64g -jar /data/apps/gatk/2.4-7/GenomeAnalysisTK.jar -T RealignerTargetCreator -R ../../ref/dmel_all_613.fa -I merged1.bam --minReadsAtLocus 4 -o ./merged2.intervals
+
+java -d64 -Xmx20g -jar /data/apps/gatk/2.4-7/GenomeAnalysisTK.jar -T VariantFiltration -R ../../ref/dmel_all_613.fa -V rawSNPS-Q30.vcf --mask inDels-Q30.vcf --maskExtension 5 --maskName InDel --clusterWindowSize 10 --filterExpression "MQ0 >= 4 && ((MQ0 / (1.0 * DP)) > 0.1)" --filterName "BadValidation" --filterExpression "QUAL < 30.0" --filterName "LowQual" --filterExpression "QD < 5.0" --filterName "LowVQCBD" --filterExpression "FS > 60" --filterName "FisherStrand" -o Q30-SNPs.vcf
+
+java -d64 -Xmx800m -jar /data/apps/gatk/2.4-7/GenomeAnalysisTK.jar -T IndelRealigner -R ../../ref/dmel_all_613.fa -I merged1.bam -targetIntervals merged1.intervals -LOD 3.0 -o merged-realigned1.bam
+# this generate merged-realigned1.bam and merged-realinged1.bai
+
+# RNA:
+tophat -G ../../ref/dmel_all_613.gtf -o ./tophatout ../../ref/dmel_all_613 test_RNA_R1.fq.gz test_RNA_R2.fq.gz
+samtools sort tophatout/accepted_hits.bam -o tophatout/accepted_hits.sort.bam
+samtools index tophatout/accepted_hits.sort.bam
+
+# ############################ Tacseq for filtering segments: 
+##
+samtools view -F 524 -f2 -u A4_small.sort.bam | samtools sort -n |samtools view -h |  python ~/software/atac_dnase_pipelines/utils/assign_multimappers.py -k 4 --paired-end | samtools view -bS | samtools fixmate -r - - | samtools view -F 1804 -f 2 -u | samtools sort > tmp.bam 
+
+##
+java -Xmx4G -jar /data/apps/picard-tools/1.11/MarkDuplicates.jar INPUT=tmp.bam OUTPUT=A4.sort.dup.bam  METRICS_FILE=A4.dup.qc VALIDATION_STRINGENCY=LENIENT ASSUME_SORTED=true REMOVE_DUPLICATES=false
+
+remove duplicates: 
+samtools view -F 1804 A4.sort.dup.bam -bS > A4_all_flt.sort.bam
+samtools index A4_all_flt.sort.bam  
+samtools flagstat A4_all_flt.sort.bam > A4_.flagstat
+
+# compute library complexity:
+# check the librry bottle neck
+
+bedtools bamtobed -bedpe -i A4_all_flt.nsort.bam | awk 'BEGIN{OFS="\t"}{print $1,$2,$4,$6,$9,$10}' | grep -v 'chrM' | sort | uniq -c | awk 'BEGIN{mt=0.000001;m0=0.000001;m1=0;m2=0.0001} ($1==1){m1=m1+1} ($1==2){m2=m2+1} {m0=m0+1} {mt=mt+$1} END{printf "%d\t%d\t%d\t%d\t%f\t%f\t%f\n",mt,m0,m1,m2,m0/mt,m1/m0,m1/m2}' > A4.pbc.qc
+
+# change to tag file
+bedtools bamtobed -i A4_all_flt.sort.bam | awk 'BEGIN{OFS="\t"}{$4="N";$5="1000";print $0}' | gzip -c >  A4_all_flt.sort.tag.gz
+
+bedtools bamtobed -bedpe -mate1 -i A4_all_flt.nsort.bam | gzip -c > A4_all_flt.nsort.bedpe.gz 
+
+# for quality --- can be skipped
+zcat A4_all_flt.nsort.bedpe.gz | grep -v "chrM" | shuf | awk 'BEGIN{OFS="\t"}{print $1,$2,$3,"N","1000",$9}' | gzip -c > A4_all_flt.nsort.shuf.tag.gz
+
+
+# for peak calling: 
+
+ macs2 callpeak -t midstep/gatTag_Tacseq_bedpe_output/A4_ED_PP1.tag.gz  -f BED -g dm -n tttest -p 0.01 --nomodel --broad --keep-dup all
+
+sort -k 8gr,8gr tttest_peaks.broadPeak | awk 'BEGIN{OFS="\t"}{$4="Peak_"NR ; print $0}' | head
+
+sort -k 14gr,14gr tttest_peaks.gappedPeak | awk 'BEGIN{OFS="\t"}{$4="Peak_"NR ; print $0}' | head
+
+# narrow peak: 
+macs2 callpeak -t midstep/gatTag_Tacseq_bedpe_output/A4_ED_PP1.tag.gz  -f BED -g dm -n tttest2 -p 0.01 --nomodel -B --SPMR --keep-dup all
+
+ sort -k 8gr,8gr tttest2_peaks.narrowPeak | awk 'BEGIN{OFS="\t"}{$4="Peak_"NR ; print $0}' | head
+
+macs2 bdgcmp -t tttest2_treat_pileup.bdg -c tttest2_control_lambda.bdg --o-prefix mdmd -m FE
+
+
+~/software/kentUtils/bin/fetchChromSizes dm6 dm6.chrome.size
+bedtools slop -i mdmd_FE_sort.bdg -g dm6.chrome.size -b 0 | ~/software/kentUtils/bin/bedClip stdin  dm6.chrome.size - |bedtools slop -i mdmd_FE_sort.bdg -g dm6.chrome.size -b 0 | ~/software/kentUtils/bin/bedClip stdin  dm6.chrome.size - | head
+sort -k1,1 -k2,2n mdmd_FE.bdg | head 
+
+
+
+
+
+
+
+

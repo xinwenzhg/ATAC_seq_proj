@@ -1,0 +1,6 @@
+midstep/*
+raw/*
+ref/*
+Snakefile
+.snakemake
+result/*
