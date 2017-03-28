@@ -36,7 +36,7 @@ Softwares need but not on HPC (all install in ~/software)
 		raw/Tacseq/*
 	output:
 		scripts/jay_Tacseq_lst.txt  #
-		midstep/detAdp_output.ext 
+		midstep/detAdp_output.txt 
 	shell:
 		mkdir midstep
 		python scripts/jay_Tacseq_lst_gt.py
@@ -57,7 +57,7 @@ Softwares need but not on HPC (all install in ~/software)
 		A7_P060_R2.trim.fq.gz
 
 
-## make trimed R1,R2 file have same length
+## make trimed R1,R2 file same length
 	input:
 		scripts/jay_Tacseq_trim_gt.py
 		raw/Tacseq_trim/*.trim.fq.gz
@@ -68,7 +68,7 @@ Softwares need but not on HPC (all install in ~/software)
 		python scripts/jay_Tacseq_trim_gt.py
 		qsub scripts/run_fastqComX_Tacseq_trim.sh
 
-## Prepare referece genome and dm6 chromosome length (will be use for bedgraph producing)
+## Prepare referece genome and dm6 chromosome length file (will be used for bedgraph producing)
 	input:
 		ref/*.fa.gz
 		ref/*.gtf
@@ -95,7 +95,7 @@ Softwares need but not on HPC (all install in ~/software)
 ## remove unmapped, multimapped reads;
 ## mark duplicates and remove them; fix mate;
 ## get flagstat, get duplication matrix; get library complexicity qc. 
-## change filter bam to bedpe files.
+## change filtered bam to bedpe files.
 	input:
 		midstep/bowtie2m_Tacseq_trim_output/*.sort.bam
 	output:
@@ -130,9 +130,9 @@ Softwares need but not on HPC (all install in ~/software)
 
 
 ## narrow peak calling for all pooled tag files
-## narrow peak callign for peudo replicate1,2
+## narrow peak calling for peudo replicate1,2
 ## bedgraph to bigwig for pooled files
-## get naive overlap list 	
+## get naive overlap of peudo replicate 1 and 2.	
 	input:
 		midstep/getTag_Tacseq_bedpe_output/*
 	output
